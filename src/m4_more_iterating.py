@@ -10,8 +10,8 @@ in testing and BOUNDARY (EDGE) TESTING.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
          Mark Hays, Amanda Stouder, Aaron Wilkin, their colleagues,
-         and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         and Nihaar Munnamgi.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import random
 import builtins  # Never necessary, but here to make a point about SUM
@@ -213,7 +213,10 @@ def sum_sequence(sequence):
     #      -- The TESTING code above does use   built_ins.sum
     #         as an ORACLE in TESTING this function, however.
     # -------------------------------------------------------------------------
-
+    sum = 0
+    for k in range(len(sequence)):
+        sum = sum + sequence[k]
+    return sum
 
 def run_test_count_items_bigger_than():
     """ Tests the   count_items_bigger_than   function. """
@@ -382,7 +385,11 @@ def count_items_bigger_than(numbers, threshold):
     # TODO: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
-
+    count = 0
+    for k in range(len(numbers)):
+        if numbers[k]>threshold:
+            count = count + 1
+    return count
 
 def run_test_count_positive_sines():
     """ Tests the   count_positive_sines   function. """
@@ -512,7 +519,11 @@ def count_positive_sines(numbers):
     # TODO: 7. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     # -------------------------------------------------------------------------
-
+    count = 0
+    for k in range(len(numbers)):
+        if math.sin(numbers[k])>0:
+            count = count + 1
+    return count
 
 def run_test_sum_first_n():
     """ Tests the   sum_first_n   function. """
@@ -620,7 +631,10 @@ def sum_first_n(numbers, n):
     #      -- The TESTING code above does use   built_ins.sum
     #         as an ORACLE in TESTING this function, however.
     # -------------------------------------------------------------------------
-
+    total = 0
+    for k in range(0,n):
+        total = total + numbers[k]
+    return total
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
